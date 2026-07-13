@@ -11,7 +11,7 @@ describe ("Login Test Suite", () => {
         
         }).then((resultado) => {
             expect(resultado.status).to.eq(200);
-            expect(resultado.body).to.have.property("token");
+            expect(resultado.body.token).to.not.be.empty;
         })
 
      })
